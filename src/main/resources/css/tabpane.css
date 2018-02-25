@@ -1,0 +1,19 @@
+.jfx-tab-pane .tab-header-area {
+    -fx-background-color: #EAD295;
+}
+
+.jfx-tab-pane .headers-region {
+    -fx-background-color: #EAD295;
+}
+
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: #EAD295;
+}
+
+.jfx-tab-pane .tab-header-area .tab-selected-line {
+    -fx-background-color: #b2753a;
+}
+
+.jfx-tab-pane:top .depth-container .tab-header-area .headers-region .tab-selected-line {
+    -fx-background-color: #802a00;
+}
