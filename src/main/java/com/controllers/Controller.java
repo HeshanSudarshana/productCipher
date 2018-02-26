@@ -22,19 +22,45 @@ public class Controller {
     @FXML
     private JFXTextField decryptPathTxt;
 
+    @FXML
+    private JFXTextField encryptKeyTxt;
 
     @FXML
-    public void encryptBrowseBtnAction(ActionEvent actionEvent) {
+    private JFXTextField decryptKeyTxt;
+
+    @FXML
+    private JFXButton decryptBtn;
+
+    @FXML
+    private JFXButton encryptBtn;
+
+
+    public String txtPathChooser() {
         FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Select a file to Encrypt");
+        fileChooser.setTitle("Select a file to Encrypt/Decrypt");
+        FileChooser.ExtensionFilter txtFilter = new FileChooser.ExtensionFilter("TEXT files (*.txt)", "*.txt");
+        fileChooser.getExtensionFilters().add(txtFilter);
         File selectedFile = fileChooser.showOpenDialog(null);
         if (selectedFile!=null) {
-            encryptPathTxt.setText(selectedFile.getAbsolutePath());
+            return (selectedFile.getAbsolutePath());
+        } else {
+            return null;
         }
     }
 
     @FXML
-    public void decryptBrowseBtnAction(ActionEvent actionEvent) {
+    public void encryptBrowseBtnAction(ActionEvent actionEvent) {
+        encryptPathTxt.setText(txtPathChooser());
+    }
 
+    @FXML
+    public void decryptBrowseBtnAction(ActionEvent actionEvent) {
+        decryptPathTxt.setText(txtPathChooser());
+    }
+
+    public void encryptBtnAction(ActionEvent actionEvent) {
+    }
+
+    public void decryptBtnAction(ActionEvent actionEvent) {
     }
 }

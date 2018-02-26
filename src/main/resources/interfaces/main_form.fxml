@@ -26,8 +26,10 @@
                               <Image url="@../images/Bill_symbol_cipher.png" />
                            </image>
                         </ImageView>
-                        <JFXTextField fx:id="encryptPathTxt" focusColor="#a88139" layoutX="26.0" layoutY="39.0" prefHeight="25.0" prefWidth="422.0" promptText="Select a file to encrypt" />
+                        <JFXTextField fx:id="encryptPathTxt" disable="true" focusColor="#a88139" layoutX="26.0" layoutY="39.0" prefHeight="25.0" prefWidth="422.0" promptText="Select a file to encrypt" />
                         <JFXButton fx:id="encryptBrowseBtn" layoutX="458.0" layoutY="32.0" onAction="#encryptBrowseBtnAction" prefHeight="40.0" prefWidth="118.0" text="Browse.." />
+                        <JFXButton fx:id="encryptBtn" layoutX="462.0" layoutY="138.0" mnemonicParsing="false" onAction="#encryptBtnAction" prefHeight="46.0" prefWidth="111.0" text="Encrypt" />
+                        <JFXTextField fx:id="encryptKetTxt" layoutX="242.0" layoutY="148.0" prefHeight="26.0" prefWidth="216.0" promptText="Enter key here" />
                      </children>
                   </AnchorPane>
               </content>
@@ -36,13 +38,15 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <JFXButton fx:id="decryptBrowseBtn" layoutX="453.0" layoutY="32.0" onAction="#decryptBrowseBtnAction" prefHeight="40.0" prefWidth="118.0" text="Browse.." />
-                        <JFXTextField fx:id="decryptPathTxt" focusColor="#a88139" layoutX="31.0" layoutY="39.0" prefHeight="25.0" prefWidth="422.0" promptText="Select an encrypted file to decrypt" />
+                        <JFXButton fx:id="decryptBrowseBtn" layoutX="468.0" layoutY="32.0" onAction="#decryptBrowseBtnAction" prefHeight="40.0" prefWidth="118.0" text="Browse.." />
+                        <JFXTextField fx:id="decryptPathTxt" disable="true" focusColor="#a88139" layoutX="50.0" layoutY="39.0" prefHeight="25.0" prefWidth="422.0" promptText="Select an encrypted file to decrypt" />
                         <ImageView fitHeight="235.0" fitWidth="268.0" layoutX="31.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/Bill_symbol_cipher.png" />
                            </image>
                         </ImageView>
+                        <JFXButton fx:id="decryptBtn" layoutX="472.0" layoutY="162.0" mnemonicParsing="false" onAction="#decryptBtnAction" prefHeight="46.0" prefWidth="111.0" text="Decrypt" />
+                        <JFXTextField fx:id="decrpytKeyTxt" layoutX="252.0" layoutY="172.0" prefHeight="26.0" prefWidth="216.0" promptText="Enter key here" />
                      </children>
                   </AnchorPane>
               </content>
